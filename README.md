@@ -1,196 +1,78 @@
-# AgriEnergy
+# AgriEnergy README
 
-**A Sustainable Farming E-Commerce Platform**
+## Project Information
+- **Project Name:** AgriEnergy
+- **Course:** PROG 7311
+- **Student:** Sajana Bidesi (ST10249843)
 
----
-
-## Table of Contents
-
-1. [About the Project](#about-the-project)  
-2. [Architecture Pattern](#architecture-pattern)  
-3. [Database](#database)  
-4. [Design Pattern](#design-pattern)  
-5. [How to Use the App](#how-to-use-the-app)  
-6. [How the App Works](#how-the-app-works)  
-7. [Technology Stack](#technology-stack)  
-8. [UI Design](#ui-design)  
-9. [Dependencies](#dependencies)  
-10. [Challenges and Changes](#challenges-and-changes)  
-11. [Connection String](#connection-string)  
-12. [GitHub Repository](#github-repository)  
-13. [YouTube Demo](#youtube-demo)
-
----
+## Links
+- **YouTube:** [Watch the Video](https://youtu.be/dhHuiQ4mKWE)
+- **GitHub:** [View Repository](https://github.com/SajanaBidesi25/AgriEnergy.git)
 
 ## About the Project
+AgriEnergy is a feature-rich e-commerce platform developed to support sustainable farming practices. The application facilitates digital empowerment for farmers, enabling them to list environmentally friendly products, participate in discussions, and connect with administrators who oversee the platform.
 
-AgriEnergy is a sustainable farming e-commerce web application designed to promote green energy products and empower local farmers. The platform allows farmers to add products related to sustainable agriculture, while employees (administrators) oversee system management, including user registration and full access to all product data.
+## Architecture Pattern - Model-View-Controller (MVC)
+- **Model:** Manages data, logic, and rules (e.g., `User`, `Product`, `Farmer`, `Employee` classes).
+- **View:** User interface layer (Razor views `.cshtml` with HTML and Bootstrap).
+- **Controller:** Manages input and data flow (e.g., `ProductController`, `UserController`).
 
-The system is built using ASP.NET Core MVC, offering a clean separation of concerns and scalability.
+## Design Pattern - Facade
+- Simplifies complex systems by providing a unified entry point.
+- Abstracts data access, improves code readability, and reduces coupling.
 
----
+## Database - SQL Server Management Studio (SSMS)
+- Database: AgriEnergyDB
+- Managed using SSMS for creating, configuring, and maintaining the database.
 
-## Architecture Pattern
-
-### Model-View-Controller (MVC)
-
-MVC is a software architectural pattern that divides the application into three main interconnected components:
-
-- **Model**: Manages the data and business logic. In AgriEnergy, this includes models like `User`, `Farmer`, `Employee`, and `Product`. These represent the core entities used throughout the app.
-- **View**: The presentation layer. These are the `.cshtml` Razor pages that render the user interface. Views are dynamically updated based on the model and controller.
-- **Controller**: Acts as an intermediary between model and view. It handles user input, communicates with models, and returns the appropriate views.
-
-![1_y8Z4MgBS_s8d4o26arDJ4w](https://github.com/user-attachments/assets/279786d4-8a5f-4c2f-ad0a-993fd19a0b60)
-
-
-Benefits of using MVC include:
-- Improved code maintenance and scalability.
-- Facilitates team collaboration (front-end and back-end).
-- Enhances unit testing due to clear separation of responsibilities.
-
----
-
-## Database
-
-### SQL Server Management Studio (SSMS)
-
-**SQL Server Management Studio (SSMS)** is a robust IDE for managing Microsoft SQL Server databases. It was used to:
-- Create the `AgriEnergyDB` database schema.
-- Insert seed data, including an initial employee for testing.
-- Maintain referential integrity with foreign keys (e.g., Products linked to Farmers).
-![images](https://github.com/user-attachments/assets/7a9c3d52-6942-4a4c-9dbb-6d9b8ee0faea)
-
-SSMS simplifies query execution, schema design, and data visualization.
-
----
-
-## Design Pattern
-
-### Facade Pattern
-
-The **Facade design pattern** is used to provide a unified interface to a set of interfaces in a subsystem. In AgriEnergy, it simplifies complex interactions with the data layer by offering a single access point for controllers.
-
-![facade_pattern_uml_diagram](https://github.com/user-attachments/assets/5eae93d0-ac14-43c0-8698-157049d0b2de)
-
-This pattern helps:
-- Reduce coupling between components.
-- Make the system easier to use and test.
-- Enhance readability and abstraction for the data access layer.
-
-A service layer or helper class may serve as the facade, especially when retrieving or filtering product data.
-
----
+## Technology Stack
+- **Backend:** C# (ASP.NET Core MVC)
+- **Frontend:** HTML, CSS, JavaScript, Razor Pages (.cshtml)
+- **Database:** SQL Server + SSMS
+- **IDE:** Visual Studio 2022
 
 ## How to Use the App
-
-### Prerequisites
-- Visual Studio 2022 or later.
-- SQL Server Express or LocalDB.
-- .NET 9.0 SDK.
-
-### Steps to Run the Project
-
-1. **Clone the Repository**
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/SajanaBidesi25/AgriEnergy.git
    ```
+2. **Open in Visual Studio:**
+   - Open the `AgriEnergy.sln` solution file.
+3. **Configure Database:**
+   - Use SSMS to create `AgriEnergyDB`.
+4. **Run the Project:**
+   - Build and launch the app in Visual Studio.
 
-2. **Open the Solution in Visual Studio**
-   - Launch Visual Studio.
-   - Open `AgriEnergy.sln`.
-
-3. **Set Up the Database**
-   - Ensure your SQL Server instance is running.
-   - Use SSMS to restore the database or allow EF Core to create it on the first run.
-   - Update the `appsettings.json` connection string if needed.
-
-4. **Build and Run the Project**
-   - Click "Build > Build Solution" or press `Ctrl + Shift + B`.
-   - Press `F5` or click the green "Start" button.
-
-### Default Employee Credentials (for testing)
-- Username: `admin@agrienergy.com`
-- Password: `Admin123!`
-
----
-
-## How the App Works
-
-### Role-Based Functionality
-
-#### Farmer:
-- Can log in to view and manage their own product listings.
-- Can create new green energy product entries.
-- Sees only their own data.
-
-#### Employee:
-- Can register new farmers.
-- Can view and manage all product listings.
-- Can filter products by category and date range.
-
-This role separation ensures data privacy and proper access control.
-
----
-
-## Technology Stack
-
-- **Frontend**: Razor, Bootstrap, HTML5, CSS3
-- **Backend**: ASP.NET Core MVC (C#)
-- **Database**: Microsoft SQL Server
-- **IDE**: Visual Studio 2022
-- **ORM**: Entity Framework Core
-
----
-
-## UI Design
-
-- Uses a green and black theme to reinforce environmental values.
-
-  ![images](https://github.com/user-attachments/assets/b9b0b951-21a3-40c6-8767-5b6041f516e6)
-
-- Pages like the Product Index feature image-based backgrounds to reflect agricultural relevance.
-- Cards and tables have been styled for consistent sizing, readability, and responsiveness.
-
----
-
-## Dependencies
-
-Key NuGet packages include:
-- `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`
-- `Microsoft.EntityFrameworkCore`
-- `Microsoft.EntityFrameworkCore.SqlServer`
-- `Microsoft.EntityFrameworkCore.Tools`
-- `Microsoft.VisualStudio.Web.CodeGeneration.Design`
-
----
-
-## Challenges and Changes
-
-- **Role Management**: RBAC implementation required thorough testing to ensure access was limited appropriately.
-- **UI Consistency**: Designing uniform cards across views to display user and product information clearly.
-- **Database Sync**: Ensuring the local database reflected the latest schema during development.
-
----
+## Role-Based Access Control (RBAC)
+- **Farmers:** Can list and manage their products.
+- **Employees:** Can manage all users and products.
 
 ## Connection String
-
+Ensure your `appsettings.json` has the correct connection string:
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=lab7L95SR\SQLEXPRESS;Database=AgriEnergyDB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
 ```
-Server=lab7L95SR\SQLEXPRESS;Database=AgriEnergyDB;Trusted_Connection=True;TrustServerCertificate=True;
-```
 
-This must be placed in `appsettings.json` under the `ConnectionStrings` section.
+## UI Design
+- Green (#006400) and black theme.
+- Responsive design using Bootstrap.
 
----
+## Challenges and Changes
+- **RBAC:** Ensured restricted access through thorough testing.
+- **UI Consistency:** Maintained a uniform design across views.
+- **Database Sync:** Regular updates to match the latest schema.
 
-## GitHub Repository
+## How the Application Works
+- **Login Page:** User authentication for Farmers and Employees.
+- **Home Page:** Accessible by all users.
+- **Manage Users (Employee):** View, edit, or delete users.
+- **Marketplace (Employee):** View all products by all farmers.
+- **Marketplace (Farmer):** Manage own product listings.
 
-[AgriEnergy GitHub Repo](https://github.com/SajanaBidesi25/AgriEnergy.git)
-
----
-
-## YouTube Demo
-
-[Youtube Video Walkthrough](https://youtu.be/dhHuiQ4mKWE)
-
-![image](https://github.com/user-attachments/assets/5dc1f37d-529f-496a-80a4-3c8f9ea46418)
-
+## Reference List
+- GeeksforGeeks, 2024. [MVC Design Pattern](https://www.geeksforgeeks.org/mvc-design-pattern/).
+- Microsoft Learn, 2024. [Add new connections - Visual Studio](https://learn.microsoft.com/en-us/visualstudio/data-tools/add-new-connections).
+- Refactoring Guru, 2014. [Facade Pattern](https://refactoring.guru/design-patterns/facade).
+- W3Schools, n.d. [CSS Cards](https://www.w3schools.com/howto/howto_css_cards.asp).
