@@ -40,6 +40,9 @@ MVC is a software architectural pattern that divides the application into three 
 - **View**: The presentation layer. These are the `.cshtml` Razor pages that render the user interface. Views are dynamically updated based on the model and controller.
 - **Controller**: Acts as an intermediary between model and view. It handles user input, communicates with models, and returns the appropriate views.
 
+![1_y8Z4MgBS_s8d4o26arDJ4w](https://github.com/user-attachments/assets/279786d4-8a5f-4c2f-ad0a-993fd19a0b60)
+
+
 Benefits of using MVC include:
 - Improved code maintenance and scalability.
 - Facilitates team collaboration (front-end and back-end).
