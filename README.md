@@ -192,4 +192,5 @@ This must be placed in `appsettings.json` under the `ConnectionStrings` section.
 
 [Youtube Video Walkthrough](https://youtu.be/dhHuiQ4mKWE)
 
+![image](https://github.com/user-attachments/assets/5dc1f37d-529f-496a-80a4-3c8f9ea46418)
 
