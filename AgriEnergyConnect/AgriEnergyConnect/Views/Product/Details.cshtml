@@ -1,0 +1,147 @@
+﻿@model AgriEnergyConnect.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+    }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('@Url.Content("~/images/grass.jpeg")');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.4);
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+    .create-user-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+    }
+
+    .create-user-container {
+        background-color: #111;
+        padding: 40px;
+        border-radius: 12px;
+        width: 700px;
+        box-sizing: border-box;
+        border: 2px solid #32CD30;
+        box-shadow: 0 0 15px rgba(50, 205, 50, 0.3);
+    }
+
+        .create-user-container h1,
+        .create-user-container h4 {
+            text-align: center;
+            color: #32CD30;
+            font-weight: bold;
+        }
+
+    .row dt {
+        font-weight: bold;
+        color: #B2D2A4;
+    }
+
+    .row dd {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    hr {
+        border-top: 1px solid #32CD30;
+    }
+
+    .white-link {
+        color: white;
+        text-decoration: none;
+    }
+
+        .white-link:hover {
+            color: #32CD30;
+            text-decoration: underline;
+        }
+</style>
+
+<div class="create-user-wrapper">
+    <div class="create-user-container">
+        <h1>Details</h1>
+        <h4>Product</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Farmer)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Farmer.FarmerID)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.ProductionDate)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.ProductionDate)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+        </dl>
+        <div>
+            <a class="white-link" asp-action="Edit" asp-route-id="@Model?.ProductID">Edit</a> |
+            <a class="white-link" asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>
+
+

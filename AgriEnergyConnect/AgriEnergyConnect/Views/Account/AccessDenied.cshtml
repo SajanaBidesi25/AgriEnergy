@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Access Denied";
+}
+
+<head>
+    <style>
+        html, body {
+            margin: 10;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .access-denied-container {
+            text-align: center;
+            padding: 40px;
+            align-items: center;
+            border: 2px solid #32CD30;
+            border-radius: 12px;
+            background-color: #111;
+            box-shadow: 0 0 15px rgba(50, 205, 50, 0.3);
+        }
+
+            .access-denied-container h1 {
+                font-size: 3rem;
+                color: #32CD30;
+                margin-bottom: 20px;
+            }
+
+            .access-denied-container p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+                color: #ccc;
+            }
+
+            .access-denied-container a.btn {
+                background-color: #32CD30;
+                border: none;
+                color: black;
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+            }
+
+                .access-denied-container a.btn:hover {
+                    background-color: #28a428;
+                    color: white;
+                }
+    </style>
+</head>
+<body>
+    <div class="access-denied-container">
+        <h1>Access Denied</h1>
+        <p>You do not have permission to view this page.</p>
+        <a class="btn" href="@Url.Action("Index", "Account")">Return to Login</a>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

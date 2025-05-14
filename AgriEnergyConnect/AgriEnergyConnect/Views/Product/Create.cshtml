@@ -1,0 +1,191 @@
+﻿@model AgriEnergyConnect.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+    }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('@Url.Content("~/images/grass.jpeg")');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.4); /* Darkens the image */
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+            z-index: -1;
+        }
+
+    .edit-user-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-bottom:30px;
+        color: #fff;
+    }
+
+    .edit-user-container {
+        background-color: #111;
+        padding: 40px;
+        border-radius: 12px;
+        width: 1000px;
+        box-sizing: border-box;
+        border: 2px solid #32CD30;
+        box-shadow: 0 0 15px rgba(50, 205, 50, 0.3);
+    }
+
+        .edit-user-container h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #32CD30;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    label {
+        font-size: 1rem;
+        color: #B2D2A4;
+        margin-bottom: 5px;
+    }
+
+    .edit-user-container {
+        background-color: #111;
+        padding: 40px;
+        border-radius: 12px;
+        width: 900px; /* Adjust width to make the container larger */
+        box-sizing: border-box;
+        padding-bottom: 50px;
+        border: 2px solid #32CD30;
+        box-shadow: 0 0 15px rgba(50, 205, 50, 0.3);
+    }
+
+    .form-control {
+        background-color: #333;
+        border: none;
+        border-bottom: 1px solid #32CD30;
+        color: white;
+        margin-bottom: 10px;
+        height: 40px;
+        font-size: 16px;
+        width: 100%; /* Ensures the width of the input field takes the full width of the container */
+        padding: 0 15px; /* Adds 15px padding inside each text box */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+
+        .form-control:focus {
+            border-color: #32CD30;
+            box-shadow: none;
+        }
+
+    .btn-primary {
+        background-color: #32CD30;
+        color: black;
+        border: none;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #2C5E1A;
+            color: white;
+        }
+
+    .btn-secondary {
+        background-color: #444;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            background-color: #666;
+        }
+
+    .text-danger {
+        font-size: 12px;
+    }
+</style>
+
+<div class="edit-user-wrapper">
+    <div class="edit-user-container">
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FarmerID" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductionDate" class="control-label"></label>
+                <input asp-for="ProductionDate" class="form-control" />
+                <span asp-validation-for="ProductionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <div>
+                <a style="color:white" asp-action="Index">Back to List</a>
+            </div>
+        </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
