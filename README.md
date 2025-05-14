@@ -190,5 +190,6 @@ This must be placed in `appsettings.json` under the `ConnectionStrings` section.
 
 ## YouTube Demo
 
-[Youtube Video Walkthrough](https://youtu.be/12LMRxEOl4I)
+[Youtube Video Walkthrough](https://youtu.be/dhHuiQ4mKWE)
+
 
