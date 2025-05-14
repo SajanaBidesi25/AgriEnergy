@@ -58,6 +58,7 @@ Benefits of using MVC include:
 - Create the `AgriEnergyDB` database schema.
 - Insert seed data, including an initial employee for testing.
 - Maintain referential integrity with foreign keys (e.g., Products linked to Farmers).
+![images](https://github.com/user-attachments/assets/7a9c3d52-6942-4a4c-9dbb-6d9b8ee0faea)
 
 SSMS simplifies query execution, schema design, and data visualization.
 
@@ -68,6 +69,8 @@ SSMS simplifies query execution, schema design, and data visualization.
 ### Facade Pattern
 
 The **Facade design pattern** is used to provide a unified interface to a set of interfaces in a subsystem. In AgriEnergy, it simplifies complex interactions with the data layer by offering a single access point for controllers.
+
+![facade_pattern_uml_diagram](https://github.com/user-attachments/assets/5eae93d0-ac14-43c0-8698-157049d0b2de)
 
 This pattern helps:
 - Reduce coupling between components.
@@ -142,6 +145,9 @@ This role separation ensures data privacy and proper access control.
 ## UI Design
 
 - Uses a green and black theme to reinforce environmental values.
+
+  ![images](https://github.com/user-attachments/assets/b9b0b951-21a3-40c6-8767-5b6041f516e6)
+
 - Pages like the Product Index feature image-based backgrounds to reflect agricultural relevance.
 - Cards and tables have been styled for consistent sizing, readability, and responsiveness.
 
